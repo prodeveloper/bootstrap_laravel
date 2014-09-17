@@ -1,3 +1,5 @@
+echo "Update app file laravel"
+
 rm $APPLICATION_NAME/app/config/app.php
 
 cp $ASSETS_PATH/app.php $APPLICATION_NAME/app/config/app.php

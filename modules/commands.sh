@@ -18,4 +18,4 @@ echo "Creating custom command translator"
 
 cp $ASSETS_PATH/CommandTranslator.php $APPLICATION_NAME/app/$APPLICATION_MAIN_CLASS/Core/CommandTranslator.php
 
-sed -i "s/{main_class}/$APPLICATION_MAIN_CLASS/" $APPLICATION_NAME/app/$APPLICATION_MAIN_CLASS/Core/CommandTranslator.php
+sed -i "s/{main_class}/$APPLICATION_MAIN_CLASS/g" $APPLICATION_NAME/app/$APPLICATION_MAIN_CLASS/Core/CommandTranslator.php
