@@ -1,0 +1,9 @@
+composer create-project laravel/laravel $APPLICATION_NAME
+
+echo "Changing permissions for storage"
+
+sudo chmod -R 777 $APPLICATION_NAME/app/storage
+
+sed -i "s/'local' => array('homestead')/'local' => array('homestead','$HOSTNAME')/" $APPLICATION_NAME/composer.json
+
+

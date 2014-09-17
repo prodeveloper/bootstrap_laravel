@@ -1,0 +1,7 @@
+echo "Adding base macros"
+
+rm $APPLICATION_NAME/app/start/global.php
+
+cp $ASSETS_PATH/global.php $APPLICATION_NAME/app/start/global.php
+
+mkdir $APPLICATION_NAME/macros

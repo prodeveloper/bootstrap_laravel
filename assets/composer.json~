@@ -1,0 +1,63 @@
+{
+    "name": "{application_name}",
+    "description": "{application_description}",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "4.2.*",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "anahkiasen/underscore-php": "dev-master",
+        "teepluss/theme": "dev-master",
+        "borisguery/inflexible": "dev-master",
+        "doctrine/inflector": "1.0.*@dev",
+        "fzaninotto/faker": "1.5.*@dev",
+        "robclancy/presenter": "1.3.0",
+        "way/generators": "2.6.1",
+        "laracasts/commander": "1.3.10",
+        "rydurham/sentinel": "1.4.19",
+        "anahkiasen/former": "dev-master"
+        
+
+    },
+    "require-dev":{
+      "behat/behat": "2.5.*@stable",
+      "behat/mink": "1.5.*@stable",
+      "behat/mink-extension": "*",
+      "behat/mink-goutte-driver": "*",
+      "guzzle/guzzle": "3.9.*@dev",
+      "doctrine/dbal": "~2.3"
+    },
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php"
+        ],
+        "psr-0":{
+            "{main_class}":"app/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable"
+}
+
